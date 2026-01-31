@@ -1,0 +1,12 @@
+# MQTT Configuration
+# Copy this file to config.py and fill in your settings
+
+MQTT_BROKER = "homeassistant.local"  # Your MQTT broker IP or hostname (e.g., "192.168.1.100")
+MQTT_PORT = 1883
+MQTT_USERNAME = None  # Set to "your_username" if your broker requires auth
+MQTT_PASSWORD = None  # Set to "your_password" if your broker requires auth
+
+# Optional: Customize these settings
+MQTT_TOPIC_PREFIX = "homeassistant/sensor/otbeat"
+SCAN_DURATION = 10  # Seconds to scan for devices
+RESCAN_INTERVAL = 300  # Seconds between rescans (5 minutes)
