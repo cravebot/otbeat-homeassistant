@@ -84,7 +84,6 @@ class OTbeatMQTTRelay:
             "name": f"OTbeat HR ({mac_suffix.upper()})",
             "state_topic": state_topic,
             "unit_of_measurement": "bpm",
-            "device_class": "None",
             "icon": "mdi:heart-pulse",
             "unique_id": f"{device_id}_hr",
             "device": {
