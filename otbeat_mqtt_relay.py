@@ -188,6 +188,11 @@ class OTbeatMQTTRelay:
             logger.error(f"[{mac_suffix}] Connection error: {e}")
         finally:
             logger.info(f"[{mac_suffix}] Disconnected")
+            
+            # Publish heart rate as 0 when disconnected
+            self.publish_heart_rate(device.address, 0)
+            logger.info(f"[{mac_suffix}] Published HR as 0 (disconnected)")
+            
             # Remove from connected devices
             if device.address in self.connected_devices:
                 del self.connected_devices[device.address]
